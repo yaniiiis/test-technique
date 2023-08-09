@@ -1,0 +1,13 @@
+
+‡
+java:S1488("eImmediately return this expression instead of assigning it to the temporary variable "filtredEvents".(Ô‘ÿèùÿÿÿÿ8é¬”á1
+_
+java:S1128"CRemove this unused import 'adeo.leroymerlin.cdp.domain.model.Band'.(í×‹8§ŠÖá1
+g
+java:S1128"ERemove this unused import 'adeo.leroymerlin.cdp.domain.model.Member'.(÷Œúÿÿÿÿ8¨ŠÖá1
+u
+java:S1128	"SRemove this unused import 'org.springframework.data.crossstore.ChangeSetPersister'.(ƒ©¨ùşÿÿÿÿ8¨ŠÖá1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¨ŠÖá1
+Q
+java:S1128"4Remove this unused import 'java.util.stream.Stream'.(ó÷”8¨ŠÖá1

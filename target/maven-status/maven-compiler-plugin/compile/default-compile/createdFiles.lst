@@ -1,0 +1,11 @@
+adeo\leroymerlin\cdp\api\mapping\EventMapper.class
+adeo\leroymerlin\cdp\domain\model\Member.class
+adeo\leroymerlin\cdp\repository\EventRepository.class
+adeo\leroymerlin\cdp\api\dto\MemberDto.class
+adeo\leroymerlin\cdp\domain\EventService.class
+adeo\leroymerlin\cdp\domain\model\Band.class
+adeo\leroymerlin\cdp\AdeoLeroyMerlinCDPRecruitmentApplication.class
+adeo\leroymerlin\cdp\api\dto\BandDto.class
+adeo\leroymerlin\cdp\api\EventController.class
+adeo\leroymerlin\cdp\domain\model\Event.class
+adeo\leroymerlin\cdp\api\dto\EventDto.class
