@@ -81,3 +81,21 @@ Team overall appreciation will be based on:
 - Code readability, structure and consistency
 - Tests, how they are written
 - Bonus: usage of Functional concepts
+
+## Notes
+
+Structure:
+- Création of a package named "api" which holds all rest Api related classes, such as controllers, dtos and mappers. 
+- Creation of a package named "domain" which holds business classes  such as services, models, repositories and exceptions.
+- Updated the points by replacing the RequestMapping above the methods directly by the type of method instead of specifying this type in the parentheses of RequestMapping (anomaly detected by sonarlint plug-in)
+   
+Fixed bugs:
+
+- Fix event deletion bug by removing @Transactional(readonly=true) in the repository.
+- Fix update bug by implementing the core of Service updateEvent method.
+  
+Added features:
+
+- Filter event by selecting only events of which at least one band contains a member whose name contains the query using the Functional concepts
+- Added controller advice to handle exceptions of the whole application from a single global management class, translating theme to http response entities. 
+- Added unit tests for all controllers and service methods using Junit4
