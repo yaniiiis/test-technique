@@ -23,23 +23,23 @@ public class EventController {
         this.eventMapper = eventMapper;
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @GetMapping( "/")
     public List<EventDto> findEvents() {
        return eventMapper.mapEventToDtos(eventService.getEvents());
     }
 
-    @RequestMapping(value = "/search/{query}", method = RequestMethod.GET)
+    @GetMapping("/search/{query}")
     public List<Event> findEvents(@PathVariable String query) {
         return eventService.getFilteredEvents(query);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @DeleteMapping("/{id}")
     public void deleteEvent(@PathVariable Long id) {
         eventService.delete(id);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public EventDto updateEvent(@PathVariable Long id, @RequestBody EventDto event) throws NotFoundException {
+    @PutMapping("/{id}")
+    public EventDto updateEvent(@PathVariable Long id, @RequestBody EventDto event) {
        return eventMapper.mapEventToDto(eventService.updateEvent(id, eventMapper.mapEventDtoToEntity(event)));
     }
 }

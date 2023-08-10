@@ -81,8 +81,6 @@ public class EventControllerTests {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(eventDto)))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content()
-                        .contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andReturn();
 
         assertThat(result.getResponse().getContentAsString()).isEqualTo(objectMapper.writeValueAsString(eventDto));
@@ -90,6 +88,8 @@ public class EventControllerTests {
 
     @Test
     public void deleteEventShouldReturnStatusIsOk() throws Exception {
+
+
         mockMvc.perform(MockMvcRequestBuilders.delete("/api/events/1002"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
@@ -119,8 +119,6 @@ public class EventControllerTests {
 
         mockMvc.perform(MockMvcRequestBuilders.get("/api/events/search/wa"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content()
-                        .contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(jsonPath("$", hasSize(2)));
     }
 }

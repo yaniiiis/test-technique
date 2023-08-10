@@ -1,7 +1,5 @@
 package adeo.leroymerlin.cdp.domain.model;
 
-import adeo.leroymerlin.cdp.domain.model.Band;
-
 import javax.persistence.*;
 import java.util.Set;
 
